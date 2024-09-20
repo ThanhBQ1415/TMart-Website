@@ -96,9 +96,9 @@ function TopBar(props) {
               variant="text"
               onClick={() => navigate(`/*`)}
               color="primary"
-              style={{ background: "#C25241", padding: "8px 16px",color: "#FFFFFF",fontSize: "25px" }}
+              style={{ background: "#d11111", padding: "8px 16px",color: "#FFFFFF",fontSize: "25px" }}
             >
-                Shoppe
+                TMART
             </Button>
             <form onSubmit={handleSearchSubmit}>
   <Grid 
@@ -141,9 +141,11 @@ function TopBar(props) {
         color="primary"
         style={{ 
           padding: "8px 16px", 
-          background: "#C25241", 
+          background: "#D81127", 
           color: "#FFFFFF", 
-          height: '40px' 
+          
+          height: '40px' ,
+          border: '0.000000000001px solid white',
         }}
       >
         Search
@@ -168,103 +170,93 @@ function TopBar(props) {
   } else {
     return (
 <AppBar position="static">
-      <Toolbar className="topbar-appBar" style={{ padding: "0 16px" }}>
-        <Grid container alignItems="center" justifyContent="space-between">
-          
-          {/* Logo or Brand */}
-          <Button
-            type="submit"
-            variant="text"
-            onClick={() => navigate(`/*`)}
-            color="primary"
-            style={{ background: "#C25241", padding: "8px 16px", color: "#FFFFFF", fontSize: "25px" }}
-          >
-            Shoppe
-          </Button>
-          <form onSubmit={handleSearchSubmit}>
-  <Grid 
-    container 
-    item 
-    xs={12} 
-    style={{ 
-      display: 'flex', 
-      justifyContent: 'center', 
-      alignItems: 'center' 
-    }}
-  >
-    <Grid item xs={12} sm={8} md={6} style={{ display: 'flex', alignItems: 'center' }}>
-      <TextField
-        variant="outlined"
-        placeholder="Search..."
-        size="small" 
-        value={name}
-        onChange={(e) => setname(e.target.value)}
-        required
-        InputProps={{
-          startAdornment: (
-            <InputAdornment position="start">
-              <SearchIcon />
-            </InputAdornment>
-          ),
-          style: { height: '40px' } 
-        }}
-        style={{ 
-          width: '5000px',   // Điều chỉnh độ dài theo ý muốn
-          maxWidth: '1000px', // Đặt maxWidth để giới hạn chiều rộng tối đa
-          background: "#FFFFFF", 
-          height: '40px', 
-          marginRight: '10px'
-        }} 
-      />
+  <Toolbar className="topbar-appBar" style={{ padding: "0px 80px" }}>
+    <Grid container alignItems="center" justifyContent="space-between">
+      {/* TMART Button */}
       <Button
         type="submit"
-        variant="contained" 
+        variant="text"
+        onClick={() => navigate(`/*`)}
         color="primary"
-        style={{ 
-          padding: "8px 16px", 
-          background: "#C25241", 
-          color: "#FFFFFF", 
-          height: '40px' 
-        }}
+        style={{ background: "#d11111", padding: "8px 16px", color: "#FFFFFF", fontSize: "27px" }}
       >
-        Search
+        TMART
       </Button>
-    </Grid>
-  </Grid>
-</form>
+      
+      {/* Search Form */}
+      <form onSubmit={handleSearchSubmit} style={{ display: 'flex', alignItems: 'center' }}>
+        <TextField
+          variant="outlined"
+          placeholder="Search..."
+          size="small" 
+          value={name}
+          onChange={(e) => setname(e.target.value)}
+          required
+          InputProps={{
+            startAdornment: (
+              <InputAdornment position="start">
+                <SearchIcon />
+              </InputAdornment>
+            ),
+            style: { height: '40px' } 
+          }}
+          style={{ 
+            width: '500px',   // Điều chỉnh độ dài theo ý muốn
+            maxWidth: '1000px', // Đặt maxWidth để giới hạn chiều rộng tối đa
+            background: "#FFFFFF", 
+            height: '40px', 
+            marginRight: '10px'
+          }} 
+        />
+        <Button
+          type="submit"
+          variant="outlined" 
+          color="primary"
+          style={{ 
+            padding: "8px 16px", 
+            background: "#d11111", 
+            color: "#FFFFFF", 
+            height: '40px',
+            borderColor: "#FFFFFF",
+            display: 'flex', // Đảm bảo Button sử dụng Flexbox để căn chỉnh nội dung
+            alignItems: 'center'
+          }}
+        >
+          Search
+        </Button>
+      </form>
 
-
-          {/* Buttons - Aligned to the right */}
+      {/* Login and Register Buttons */}
+      <Grid item>
+        <Grid container spacing={2} alignItems="center" justifyContent="flex-end">
           <Grid item>
-            <Grid container spacing={2} alignItems="center">
-              <Grid item>
-                <Button
-                  type="submit"
-                  variant="text"
-                  onClick={() => navigate(`/login`)}
-                  color="primary"
-                  style={{ background: "#C25241", padding: "8px 16px", color: "#FFFFFF" }}
-                >
-                  Đăng Nhập
-                </Button>
-              </Grid>
-              <Grid item>
-                <Button
-                  type="submit"
-                  variant="text"
-                  onClick={() => navigate(`/register`)}
-                  color="primary"
-                  style={{ background: "#C25241", padding: "8px 16px", color: "#FFFFFF" }}
-                >
-                  Đăng Ký
-                </Button>
-              </Grid>
-            </Grid>
+            <Button
+              type="submit"
+              variant="outlined"
+              onClick={() => navigate(`/login`)}
+              color="primary"
+              style={{borderColor: "#FFFFFF", background: "#d11111", padding: "8px 16px", color: "#FFFFFF" }}
+            >
+              Đăng Nhập
+            </Button>
           </Grid>
-
+          <Grid item>
+            <Button
+              type="submit"
+              variant="outlined"
+              onClick={() => navigate(`/register`)}
+              color="primary"
+              style={{borderColor: "#FFFFFF", background: "#d11111", padding: "8px 16px", color: "#FFFFFF" }}
+            >
+              Đăng Ký
+            </Button>
+          </Grid>
         </Grid>
-      </Toolbar>
-    </AppBar>
+      </Grid>
+    </Grid>
+  </Toolbar>
+</AppBar>
+
 
     
     );

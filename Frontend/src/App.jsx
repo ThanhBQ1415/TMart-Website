@@ -64,11 +64,7 @@ const App = (props) => {
                 onSearchname={handleSearchname}     
               />
             </Grid>
-             {/* <Grid item xs={4} >
-                <Paper className="main-grid-item">
-                  <UserList loginUser={loginUser} />
-                </Paper>
-              </Grid> */}
+           
             <Grid item sm={!!loginUser ? 10 : 12} >
               <div className="main-grid-item ">
                   <Routes>

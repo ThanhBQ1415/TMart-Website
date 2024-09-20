@@ -47,14 +47,48 @@ function UserList(props) {
       
       <div>
 
-        <a href="https://shopee.vn/">
-        <img 
-          src= "https://cf.shopee.vn/file/vn-11134258-7r98o-m09z48n03w8d07_xxhdpi"
-          alt="Example" 
-          style={{ width: '1400px',  height: '200px', marginRight: '50px', margin: '0 auto', 
-            display: 'block'  }} 
-        />
-        </a>
+<div style={{ display: 'flex', alignItems: 'flex-start' }}>
+
+  <a href="https://shopee.vn/">
+    <img 
+      src="https://vmartplus.w2.exdomain.net/image/cache/catalog/vmartplus/banner/main-banner-970x400.webp"
+      alt="Example" 
+      style={{ width: '1000px', height: '310px', marginRight: '20px' }} 
+    />
+  </a>
+
+
+  <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+    <a href="https://shopee.vn/">
+      <img 
+        src="https://vmartplus.w2.exdomain.net/image/cache/catalog/vmartplus/banner/side-banner-1-400x150.webp"
+        alt="Example" 
+        style={{ width: '400px', height: '150px', marginBottom: '10px' }} 
+      />
+    </a>
+
+    <a href="https://shopee.vn/">
+      <img 
+        src="https://vmartplus.w2.exdomain.net/image/cache/catalog/vmartplus/banner/side-banner-3-400x150.webp"
+        alt="Example" 
+        style={{ width: '400px', height: '150px',marginBottom: '10px' }} 
+      />
+    </a>
+  </div>
+</div>
+
+
+<div style={{ display: 'flex', alignItems: 'flex-start' }}>
+
+  <a href="https://shopee.vn/">
+    <img 
+      src="https://vmartplus.w2.exdomain.net/image/cache/catalog/vmartplus/banner/wide-banner-1920x150.webp"
+      alt="Example" 
+      style={{ width: '1420px', height: '100px', marginRight: '20px' }} 
+    />
+  </a>
+
+  </div>
         
         <Typography variant="h5" style={{ color: '#C25241', fontWeight: '100000' }}>Product</Typography>
         <List component="nav">

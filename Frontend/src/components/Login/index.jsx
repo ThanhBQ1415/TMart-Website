@@ -46,7 +46,7 @@ function LoginAndRegister(props) {
     <Grid container spacing={2} justifyContent="center" >
       <Grid item xs={6}>
         <Paper elevation={3} style={{ padding: 20 }}>
-          <Typography variant="h6" gutterBottom>
+          <Typography  variant="h6" gutterBottom>
                 Đăng Nhập
           </Typography>
           <form onSubmit={ handleLoginSubmit }>
@@ -74,7 +74,7 @@ function LoginAndRegister(props) {
               variant="contained"
               color="primary"
               fullWidth
-              style={{ background: "#C25241"}}
+              style={{ background: "#d11111"}}
             >
               Đăng Nhập
             </Button>
