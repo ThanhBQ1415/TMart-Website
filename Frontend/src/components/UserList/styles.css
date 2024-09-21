@@ -1,0 +1,33 @@
+/* App.css */
+.product-list {
+    display: flex;        /* Sử dụng Flexbox để sắp xếp ngang */
+    gap: 20px;            /* Khoảng cách giữa các sản phẩm */
+    flex-wrap: wrap;      /* Đảm bảo các sản phẩm sẽ xuống dòng khi không đủ chỗ */
+    justify-content: space-around;  /* Căn đều các sản phẩm */
+  }
+  
+  .product-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    width: 200px;  /* Đặt kích thước cố định cho mỗi thẻ sản phẩm */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Hiệu ứng đổ bóng nhẹ */
+  }
+  
+  .product-image {
+    width: 100%;  /* Đặt chiều rộng của hình ảnh bằng với thẻ chứa */
+    height: auto;
+  }
+  
+  .price {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .product-info h3 {
+    margin: 10px 0;
+    font-size: 18px;
+  }
+  

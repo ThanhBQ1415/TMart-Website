@@ -13,6 +13,7 @@ router.get(
         response.status(500).send({ error });     
       }
   });
+  
   router.get(
     "/:id", 
     async (request, response) => {
@@ -37,4 +38,48 @@ router.get(
       }
   }); 
 
+  router.get(
+    "/list1/laptop", 
+    async (request, response) => {
+      try {
+        const product = await Product.find({ type_product: 'laptop' });
+        response.send(product);
+        
+      } catch (error) {
+        response.status(500).send({ error });
+      }
+  }); 
+  router.get(
+    "/list2/smartphone", 
+    async (request, response) => {
+      try {
+        const product = await Product.find({ type_product: 'smartphone' });
+        response.send(product);
+        
+      } catch (error) {
+        response.status(500).send({ error });
+      }
+  }); 
+  router.get(
+    "/list3/keyboard", 
+    async (request, response) => {
+      try {
+        const product = await Product.find({ type_product: 'keyboard' });
+        response.send(product);
+        
+      } catch (error) {
+        response.status(500).send({ error });
+      }
+  }); 
+  router.get(
+    "/list4/mouse", 
+    async (request, response) => {
+      try {
+        const product = await Product.find({ type_product: 'mouse' });
+        response.send(product);
+        
+      } catch (error) {
+        response.status(500).send({ error });
+      }
+  }); 
 module.exports = router;

@@ -40,52 +40,10 @@ function TopBar(props) {
       .catch(err => console.log("Error: logout error in posting", err.message));
     setlogoutPrompt(true); 
   };
-  //end logout
-
-  // dialog logout alert
-  const handleLogoutPromptClose = (event, reason) => {
-    if (reason === 'clickaway') return;
-    setlogoutPrompt(false);
-  };
-  //end dialog logout alert
-
-  const handleCloseDialog = () => {
-    setOpen(false);
-  };
-
-  // end dialog upload photo 
-
-  //set file image
-  const handleImageUpload = event => {
-    const file = event.target.files[0];
-    setSelectedImage(file);
-    setOpen(true);  
-  };
-  // end set file image
+  
+ 
 
 
-  // submit upload photo
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    if(selectedImage.size > 0){
-      const form = new FormData();
-      form.append("photo", selectedImage);
-      form.append("postContent", postContent);
-      form.append("user_id", props.loginUser._id) 
-      setSelectedImage(null);
-      setPostContent('')
-      axios
-      .post(`${apiUrl.api}/api/photo/new`, form,{credentials: "include", withCredentials: true})
-      .then(response => {
-          props.onPhotoUpload();
-          console.log("photo successfully uploaded");
-      })
-      .catch(err => console.log("Error: photo uploaded error ", err));
-    }
-    handleCloseDialog();
-  };
-
-  // end submit upload photo 
   if (props.loginUser) {
     return (
       <AppBar position="static">

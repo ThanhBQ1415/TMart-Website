@@ -46,20 +46,25 @@ function UserDetail(props) {
   //----------end fetch API----------------
   if (user) {
     return (
+      
 
       <>
-      
+       
+
+
+
+
         <Paper elevation={3} style={{ padding: 20, margin: 20 }}>   
-          <Typography variant="h6" style={{ color:'#C25241', fontWeight: '600' }}>Thông tin sản phẩm</Typography>
+          <Typography variant="h6" style={{ color:'#d11111', fontWeight: '1000',fontSize: '30px' }}>Thông tin sản phẩm</Typography>
           <img 
           src= {user.file_name}
           alt="Example" 
-          style={{ width: '100px', height: 'auto', marginRight: '16px' }} 
+          style={{ width: '500px', height: 'auto', marginRight: '50px' }} 
          />
           <div style={{ marginLeft:'10px' }}>
-            <Typography variant="body1" style={{ color:'#444444' }}><b>Tên</b>: {user.name}</Typography>
-            <Typography variant="body1" style={{ color:'#444444' }}><b>Gia</b>: {user.price}</Typography>
-            <Typography variant="body1" style={{ color:'#444444' }}>
+            <Typography variant="body1" style={{ color:'#444444',fontSize: '20px' }}><b>Tên</b>: {user.name}</Typography>
+            <Typography variant="body1" style={{ color:'#444444',fontSize: '20px' }}><b>Gia</b>: {user.price}</Typography>
+            <Typography variant="body1" style={{ color:'#444444' ,fontSize: '20px'}}>
             <b>Mô tả</b>: {user.description}
             </Typography>
           </div>
@@ -69,7 +74,7 @@ function UserDetail(props) {
               variant="contained"
               id="btn"
            
-              style={{ backgroundColor: '#C25241' }}
+              style={{ backgroundColor: '#d11111' }}
             >
               Mua Hàng
             </Button>

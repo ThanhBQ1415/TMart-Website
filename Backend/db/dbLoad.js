@@ -57,6 +57,7 @@ const productModels = models.productListModel();
       price: product.price,
       description: product.description,
       file_name: product.file_name,
+      type_product : product.type_product,
     });
     try {
       await productObj.save();

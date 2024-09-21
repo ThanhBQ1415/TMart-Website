@@ -294,37 +294,261 @@ const comments = [
   comment12,
   comment13,
 ];
-const product1={
-  name: "Laptop",
-  price: "10.000$",
-  description: "gia dat",
-  file_name: "https://cdn.tgdd.vn/Products/Images/44/321191/Kit/dell-inspiron-15-3520-i5-n5i5011w1-note.jpg",
+const product1 = {
+  name: "Asus Vivobook Go 15",
+  type_product: "laptop",
+  price: "650$",
+  description: "Asus Vivobook Go 15 là mẫu laptop phù hợp cho sinh viên và nhân viên văn phòng với thiết kế nhẹ, màn hình 15.6 inch và chip xử lý AMD Ryzen 5 mạnh mẽ.",
+  file_name: "https://cdn.tgdd.vn/Products/Images/44/311178/asus-vivobook-go-15-e1504fa-r5-nj776w-thumb-600x600.jpg",
 };
-const product2={
-  name: "Iphone",
-  price: "15.000$",
-  description: "IPHONE X",
-  file_name: "https://www.apple.com/newsroom/images/2024/09/apple-debuts-iphone-16-pro-and-iphone-16-pro-max/article/Apple-iPhone-16-Pro-hero-geo-240909_inline.jpg.large.jpg",
+
+const product2 = {
+  name: "HP 15 FD0234TU",
+  type_product: "laptop",
+  price: "700$",
+  description: "HP 15 FD0234TU được trang bị bộ vi xử lý Intel Core i5 thế hệ 12 cùng màn hình 15.6 inch, phù hợp cho nhu cầu học tập và công việc.",
+  file_name: "https://cdn.tgdd.vn/Products/Images/44/323920/hp-15-fd0234tu-i5-9q969pa-thumb-1-600x600.jpg",
 };
-const product3={
-  name: "LED",
-  price: "1.000$",
-  description: "LED HS",
-  file_name: "https://bizweb.dktcdn.net/thumb/1024x1024/100/320/971/products/led-day-nanoco.jpg?v=1593672033303",
+
+const product3 = {
+  name: "Lenovo Ideapad Slim 3",
+  type_product: "laptop",
+  price: "750$",
+  description: "Lenovo Ideapad Slim 3 sở hữu thiết kế mỏng nhẹ, phù hợp cho người dùng di chuyển nhiều và hiệu suất mạnh mẽ với Intel Core i5.",
+  file_name: "https://cdn.tgdd.vn/Products/Images/44/313333/lenovo-ideapad-slim-3-15iah8-i5-83er00evn-thumb-600x600.jpg",
 };
-const product4={
-  name: "LEGO",
-  price: "5.000$",
-  description: "LEGO GA",
-  file_name: "https://mbmart.com.vn/100/329/420/products/bo-do-choi-xep-hinh-lego-city-project-mecha-1.jpg.webp",
+
+const product4 = {
+  name: "Dell Inspiron 15 3520",
+  type_product: "laptop",
+  price: "800$",
+  description: "Dell Inspiron 15 3520 được trang bị màn hình 15.6 inch Full HD và bộ vi xử lý Intel Core i5, phù hợp cho công việc và giải trí.",
+  file_name: "https://cdn.tgdd.vn/Products/Images/44/325242/dell-inspiron-15-3520-i5-n5i5052w1-thumb-600x600.jpg",
 };
+
+const product5 = {
+  name: "Lenovo LOQ Gaming",
+  type_product: "laptop",
+  price: "950$",
+  description: "Lenovo LOQ Gaming là lựa chọn lý tưởng cho game thủ với màn hình lớn và card đồ họa rời, mang đến trải nghiệm gaming mượt mà.",
+  file_name: "https://cdn.tgdd.vn/Products/Images/44/322072/lenovo-loq-gaming-15iax9-i5-83gs000jvn-thumb-new-600x600.jpg",
+};
+
+const product6 = {
+  name: "Acer Aspire Lite 14",
+  type_product: "laptop",
+  price: "600$",
+  description: "Acer Aspire Lite 14 cung cấp hiệu suất tốt với bộ vi xử lý Intel Core i5, phù hợp cho nhu cầu học tập và làm việc hàng ngày.",
+  file_name: "https://cdn.tgdd.vn/Products/Images/44/326637/acer-aspire-lite-14-51m-59bn-i5-nxktxsv001-100624-101857-600x600.jpg",
+};
+
+const product7 = {
+  name: "HP Pavilion 15",
+  type_product: "laptop",
+  price: "850$",
+  description: "HP Pavilion 15 sở hữu màn hình lớn và hiệu suất mạnh mẽ với chip Intel Core i5, phù hợp cho cả làm việc và giải trí.",
+  file_name: "https://cdn.tgdd.vn/Products/Images/44/309565/hp-pavilion-15-eg2081tu-i5-7c0q4pa-thumb-600x600.jpg",
+};
+
+const product8 = {
+  name: "iPhone 16 Pro Max",
+  type_product: "smartphone",
+  price: "1.500$",
+  description: "iPhone 16 Pro Max sở hữu thiết kế titan sa mạc độc đáo, màn hình lớn và camera chất lượng cao.",
+  file_name: "https://cdn.tgdd.vn/Products/Images/42/329149/iphone-16-pro-max-titan-sa-mac.png",
+};
+
+const product9 = {
+  name: "iPhone 16 Pro",
+  type_product: "smartphone",
+  price: "1.300$",
+  description: "iPhone 16 Pro có thiết kế titan tự nhiên, hiệu năng vượt trội với chip A17 và nhiều tính năng hiện đại.",
+  file_name: "https://cdn.tgdd.vn/Products/Images/42/329143/iphone-16-pro-titan-tu-nhien.png",
+};
+
+const product10 = {
+  name: "Samsung Galaxy A55 5G",
+  type_product: "smartphone",
+  price: "500$",
+  description: "Samsung Galaxy A55 5G có thiết kế tinh tế, hỗ trợ mạng 5G và camera chất lượng cao.",
+  file_name: "https://cdn.tgdd.vn/Products/Images/42/322096/samsung-galaxy-a55-5g-xanh-thumb-1-600x600.jpg",
+};
+
+const product11 = {
+  name: "Samsung Galaxy Z Flip6",
+  type_product: "smartphone",
+  price: "1.200$",
+  description: "Samsung Galaxy Z Flip6 có thiết kế gập hiện đại, phù hợp với những người yêu thích sự tiện lợi và thời trang.",
+  file_name: "https://cdn.tgdd.vn/Products/Images/42/320722/samsung-galaxy-z-flip6-xanh-thumbn-600x600.jpg",
+};
+
+const product12 = {
+  name: "Samsung Galaxy M15 5G",
+  type_product: "smartphone",
+  price: "450$",
+  description: "Samsung Galaxy M15 5G hỗ trợ kết nối mạng 5G và có thiết kế thanh lịch, phù hợp cho nhiều nhu cầu khác nhau.",
+  file_name: "https://cdn.tgdd.vn/Products/Images/42/325073/samsung-galaxy-m15-5g-blue-thumb-1-600x600.jpg",
+};
+
+const product13 = {
+  name: "Samsung Galaxy M35 5G",
+  type_product: "smartphone",
+  price: "550$",
+  description: "Samsung Galaxy M35 5G cung cấp hiệu suất mạnh mẽ với màn hình lớn và khả năng kết nối 5G, phù hợp cho người dùng năng động.",
+  file_name: "https://cdn.tgdd.vn/Products/Images/42/323563/samsung-galaxy-m35-5g-xanhdam-thumb-600x600.jpg",
+};
+
+const product14 = {
+  name: "Samsung Galaxy S23 FE",
+  type_product: "smartphone",
+  price: "900$",
+  description: "Samsung Galaxy S23 FE sở hữu hiệu năng mạnh mẽ, màn hình đẹp và camera chất lượng, phù hợp cho người dùng cao cấp.",
+  file_name: "https://cdn.tgdd.vn/Products/Images/42/306994/samsung-galaxy-s23-fe-mint-thumbnew-600x600.jpg",
+};
+
+const product15 = {
+  name: "Bàn phím Bluetooth Logitech K380s",
+  type_product: "keyboard",
+  price: "40$",
+  description: "Bàn phím Bluetooth Logitech K380s có thiết kế nhỏ gọn và kết nối không dây linh hoạt, phù hợp cho người dùng di động.",
+  file_name: "https://cdn.tgdd.vn/Products/Images/4547/323008/ban-phim-bluetooth-logitech-k380s-hong-thumb-600x600.jpg",
+};
+
+const product16 = {
+  name: "Bàn phím có dây Gaming Rapoo V500 Alloy",
+  type_product: "keyboard",
+  price: "50$",
+  description: "Bàn phím có dây Gaming Rapoo V500 Alloy sở hữu thiết kế bền bỉ với tính năng anti-ghosting, mang đến trải nghiệm chơi game tốt.",
+  file_name: "https://cdn.tgdd.vn/Products/Images/4547/246137/co-co-day-gaming-rapoo-v500alloy-den-thumb-600x600.jpeg",
+};
+
+const product17 = {
+  name: "Bàn phím Bluetooth Logitech Signature K650",
+  type_product: "keyboard",
+  price: "60$",
+  description: "Bàn phím Bluetooth Logitech Signature K650 mang đến sự thoải mái khi gõ phím và khả năng kết nối không dây tiện lợi.",
+  file_name: "https://cdn.tgdd.vn/Products/Images/4547/326735/ban-phim-bluetooth-logitech-signature-k650-den-600x600.jpg",
+};
+
+const product18 = {
+  name: "Bàn phím Bluetooth Asus Marshmallow KW100",
+  type_product: "keyboard",
+  price: "55$",
+  description: "Bàn phím Bluetooth Asus Marshmallow KW100 có thiết kế thời trang với màu sắc hiện đại, phù hợp cho người dùng trẻ.",
+  file_name: "https://cf.shopee.vn/file/9d6ffb68042d2b3903b6d93af13fd7a0",
+};
+const product19 = {
+  name: "Bàn phím Bluetooth Logitech Key-To-Go 2",
+  type_product: "keyboard",
+  price: "65$",
+  description: "Bàn phím Bluetooth Logitech Key-To-Go 2 siêu mỏng và nhẹ, lý tưởng cho người dùng di động cần tính linh hoạt.",
+  file_name: "https://cdn.tgdd.vn/Products/Images/4547/328212/ban-phim-bluetooth-logitech-key-to-go-2-240724-023119-600x600.jpg",
+};
+
+const product20 = {
+  name: "Bàn phím có dây Logitech K120",
+  type_product: "keyboard",
+  price: "20$",
+  description: "Bàn phím có dây Logitech K120 đơn giản nhưng hiệu quả, với độ bền cao, phù hợp cho các môi trường làm việc văn phòng.",
+  file_name: "https://cdn.tgdd.vn/Products/Images/4547/323001/ban-phim-co-day-logitech-k120-thumb-600x600.jpg",
+};
+
+const product21 = {
+  name: "Bộ bàn phím chuột không dây Logitech MK240",
+  type_product: "keyboard",
+  price: "45$",
+  description: "Bộ bàn phím chuột không dây Logitech MK240 kết hợp sự tiện lợi và gọn nhẹ với khả năng kết nối không dây đáng tin cậy.",
+  file_name: "https://cdn.tgdd.vn/Products/Images/4547/323006/bo-ban-phim-chuot-khong-day-logitech-mk240-thumb-2-600x600.jpg",
+};
+
+const product22 = {
+  name: "Chuột có dây Silent Rapoo N1200",
+  type_product: "mouse",
+  price: "10$",
+  description: "Chuột có dây Silent Rapoo N1200 với thiết kế yên tĩnh và thao tác mượt mà, phù hợp cho môi trường làm việc yên tĩnh.",
+  file_name: "https://cdn.tgdd.vn/Products/Images/86/235979/chuot-co-day-silent-rapoo-n1200-den-01-600x600.jpg",
+};
+
+const product23 = {
+  name: "Chuột không dây DareU LM106G",
+  type_product: "mouse",
+  price: "15$",
+  description: "Chuột không dây DareU LM106G có kết nối ổn định và thiết kế nhẹ nhàng, phù hợp cho công việc hàng ngày.",
+  file_name: "https://cdn.tgdd.vn/Products/Images/86/293996/chuot-khong-day-dareu-lm106g-den-thumb-1-600x600.jpg",
+};
+
+const product24 = {
+  name: "Chuột Bluetooth Silent Logitech M240",
+  type_product: "mouse",
+  price: "30$",
+  description: "Chuột Bluetooth Silent Logitech M240 với thiết kế nhỏ gọn và yên tĩnh, hoàn hảo cho công việc văn phòng di động.",
+  file_name: "https://cdn.tgdd.vn/Products/Images/86/311113/chuot-bluetooth-silent-logitech-m240-thumb-600x600.jpg",
+};
+
+const product25 = {
+  name: "Chuột không dây Logitech M170",
+  type_product: "mouse",
+  price: "20$",
+  description: "Chuột không dây Logitech M170 có kết nối không dây đáng tin cậy và thiết kế đơn giản, hiệu quả.",
+  file_name: "https://cdn.tgdd.vn/Products/Images/86/195376/chuot-khong-day-logitech-m170-den-thumb3-600x600.jpeg",
+};
+
+const product26 = {
+  name: "Chuột có dây Zadez M213",
+  type_product: "mouse",
+  price: "8$",
+  description: "Chuột có dây Zadez M213 với giá thành hợp lý và thiết kế bền bỉ, thích hợp cho công việc văn phòng hoặc học tập.",
+  file_name: "https://cdn.tgdd.vn/Products/Images/86/229586/chuot-co-day-zadez-m213-den01-600x600.jpg",
+};
+
+const product27 = {
+  name: "Chuột không dây Logitech M185",
+  type_product: "mouse",
+  price: "25$",
+  description: "Chuột không dây Logitech M185 với khả năng kết nối không dây linh hoạt, sử dụng pin lâu và thiết kế vừa vặn tay.",
+  file_name: "https://cdn.tgdd.vn/Products/Images/86/223821/chuot-khong-day-logitech-m185-thumb2-1-600x600.jpeg",
+};
+
+const product28 = {
+  name: "Chuột gaming Logitech G102 Gen2 Lightsync",
+  type_product: "mouse",
+  price: "35$",
+  description: "Chuột gaming Logitech G102 Gen2 Lightsync mang đến trải nghiệm chơi game tối ưu với độ nhạy cao và đèn LED RGB.",
+  file_name: "https://cdn.tgdd.vn/Products/Images/86/234490/chuot-gaming-logitech-g102-gen2-lightsync-01-600x600.jpg",
+};
+
 
 const product = [
   product1,
   product2,
   product3,
   product4,
+  product5,
+  product6,
+  product7,
+  product8,
+  product9,
+  product10,
+  product11,
+  product12,
+  product13,
+  product14,
+  product15,
+  product16,
+  product17,
+  product18,
+  product19,
+  product20,
+  product21,
+  product22,
+  product23,
+  product24,
+  product25,
+  product26,
+  product27,
+  product28
 ];
+
 comments.forEach(function (comment) {
   const photo = photos.filter(function (photo) {
     return photo._id === comment.photo_id;

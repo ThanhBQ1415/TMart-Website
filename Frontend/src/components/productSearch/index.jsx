@@ -44,7 +44,7 @@ function productSearch(props) {
 
     return (
       <div>
-        <Typography variant="h5" style={{ color: '#C25241', fontWeight: '600' }}>Product</Typography>
+        <Typography variant="h5" style={{ color: '#d11111', fontWeight: '600' }}>Product</Typography>
         <List component="nav">
           {data.map((item, index) => (
             <React.Fragment key={index}>

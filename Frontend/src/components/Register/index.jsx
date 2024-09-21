@@ -37,10 +37,6 @@ function LoginAndRegister(props) {
         username: registerUsername,
         password: registerPassword,
         first_name: firstName,
-        last_name: lastName,
-        location: location, 
-        occupation: occupation,
-        description: description,
       },{
         withCredentials: true,
         credentials: "include"
@@ -75,15 +71,7 @@ function LoginAndRegister(props) {
                   onChange={(e) => setFirstName(e.target.value)}
                   required
                 />
-                <TextField
-                  variant="outlined"
-                  margin="normal"
-                  fullWidth
-                  label="Họ đệm"
-                  value={lastName}
-                  onChange={(e) => setLastName(e.target.value)}
-                  required
-                />               
+                  
               </>
             <TextField
               variant="outlined"
@@ -116,33 +104,7 @@ function LoginAndRegister(props) {
                   onChange={(e) => setConfirmPassword(e.target.value)}
                   required
                 />
-                <TextField
-                  variant="outlined"
-                  margin="normal"
-                  fullWidth
-                  label="Địa điểm"
-                  type="location"
-                  value={location}
-                  onChange={(e) => setLocation(e.target.value)}
-                />
-                <TextField
-                  variant="outlined"
-                  margin="normal"
-                  fullWidth
-                  label="Nghề nghiệp"
-                  type="occupation"
-                  value={occupation}
-                  onChange={(e) => setOccupation(e.target.value)}
-                />
-                <TextField
-                  variant="outlined"
-                  margin="normal"
-                  fullWidth
-                  label="Mô tả"
-                  type="description"
-                  value={description}
-                  onChange={(e) => setDescription(e.target.value)}
-                />
+               
                 
               </>
         
@@ -151,7 +113,7 @@ function LoginAndRegister(props) {
               variant="contained"
               color="primary"
               fullWidth
-              style={{ background: "#C25241"}}
+              style={{ background: "#d11111"}}
             >
               Đăng ký
             </Button>
