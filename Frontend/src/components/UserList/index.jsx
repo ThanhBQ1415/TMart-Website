@@ -141,7 +141,7 @@ useEffect(() => {
 <div>
   <div style={{ display: 'flex', alignItems: 'flex-start' }}>
 
-  <a href="https://https://t-mart-t.vercel.app/product/66ed94d09ff7a868dcf7b1dc.vn/">
+  <a href="https://t-mart-t.vercel.app/product/66ed94d09ff7a868dcf7b1dc">
     <img 
       src="https://vmartplus.w2.exdomain.net/image/cache/catalog/vmartplus/banner/main-banner-970x400.webp"
       alt="Example" 
