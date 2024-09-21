@@ -151,7 +151,7 @@ useEffect(() => {
 
 
   <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
-    <a href="https://shopee.vn/">
+    <a href="https://t-mart-t.vercel.app/product/66ed94d09ff7a868dcf7b1ec">
       <img 
         src="https://vmartplus.w2.exdomain.net/image/cache/catalog/vmartplus/banner/side-banner-1-400x150.webp"
         alt="Example" 
@@ -159,7 +159,7 @@ useEffect(() => {
       />
     </a>
 
-    <a href="https://shopee.vn/">
+    <a href="https://t-mart-t.vercel.app/product/66ed94d09ff7a868dcf7b1ec">
       <img 
         src="https://vmartplus.w2.exdomain.net/image/cache/catalog/vmartplus/banner/side-banner-3-400x150.webp"
         alt="Example" 
@@ -172,7 +172,7 @@ useEffect(() => {
 
 <div style={{ display: 'flex', alignItems: 'flex-start' }}>
 
-  <a href="https://shopee.vn/">
+  <a href="https://t-mart-t.vercel.app/product/66ed94d09ff7a868dcf7b1de">
     <img 
       src="https://vmartplus.w2.exdomain.net/image/cache/catalog/vmartplus/banner/wide-banner-1920x150.webp"
       alt="Example" 
