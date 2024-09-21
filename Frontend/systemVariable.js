@@ -1,4 +1,4 @@
-const api = "http://localhost:8081"
+const api = "https://t-mart-ebon.vercel.app"
 
 const sysVar = {
     api: api,
