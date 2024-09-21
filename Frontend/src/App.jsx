@@ -47,9 +47,7 @@ const App = (props) => {
   const handleSearchname= name=>{
     setsearchname(name);
   }
-  const handlePhotoUpload = () => {
-    setUploadedPhoto(!uploadedPhoto);  
-  };
+ 
 
   return (
       <Router>
@@ -57,8 +55,7 @@ const App = (props) => {
           <Grid container>
             <Grid item xs={12} className="topbar-sticky" >
               <TopBar 
-                onLoginUserChange={handleLoginUserChange} 
-                onPhotoUpload={handlePhotoUpload} 
+                onLoginUserChange={handleLoginUserChange}          
                 loginUser={loginUser}     
                 searchname={searchname}
                 onSearchname={handleSearchname}     

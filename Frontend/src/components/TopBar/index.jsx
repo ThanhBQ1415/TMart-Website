@@ -126,6 +126,8 @@ function TopBar(props) {
 
     );
   } else {
+
+
     return (
 <AppBar position="static">
   <Toolbar className="topbar-appBar" style={{ padding: "0px 80px" }}>
@@ -142,7 +144,7 @@ function TopBar(props) {
       </Button>
       
       {/* Search Form */}
-      <form onSubmit={handleSearchSubmit} style={{ display: 'flex', alignItems: 'center' }}>
+      <form onSubmit={handleSearchSubmit} style={{ display: 'flex', alignItems: 'center',justifyContent:'space-between'}}>
         <TextField
           variant="outlined"
           placeholder="Search..."
