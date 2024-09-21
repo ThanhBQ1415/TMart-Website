@@ -58,59 +58,48 @@ function TopBar(props) {
             >
                 TMART
             </Button>
-            <form onSubmit={handleSearchSubmit}>
-  <Grid 
-    container 
-    item 
-    xs={12} 
-    style={{ 
-      display: 'flex', 
-      justifyContent: 'center', 
-      alignItems: 'center' 
-    }}
-  >
-    <Grid item xs={12} sm={8} md={6} style={{ display: 'flex', alignItems: 'center' }}>
-      <TextField
-        variant="outlined"
-        placeholder="Search..."
-        size="small" 
-        value={name}
-        onChange={(e) => setname(e.target.value)}
-        required
-        InputProps={{
-          startAdornment: (
-            <InputAdornment position="start">
-              <SearchIcon />
-            </InputAdornment>
-          ),
-          style: { height: '40px' } 
-        }}
-        style={{ 
-          width: '5000px',   // Điều chỉnh độ dài theo ý muốn
-          maxWidth: '600px', // Đặt maxWidth để giới hạn chiều rộng tối đa
-          background: "#FFFFFF", 
-          height: '40px', 
-          marginRight: '10px'
-        }} 
-      />
-      <Button
-        type="submit"
-        variant="contained" 
-        color="primary"
-        style={{ 
-          padding: "8px 16px", 
-          background: "#D81127", 
-          color: "#FFFFFF", 
-          
-          height: '40px' ,
-          border: '0.000000000001px solid white',
-        }}
-      >
-        Search
-      </Button>
-    </Grid>
-  </Grid>
-</form>
+             {/* Search Form */}
+      <form onSubmit={handleSearchSubmit} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <TextField
+          variant="outlined"
+          placeholder="Search..."
+          size="small" 
+          value={name}
+          onChange={(e) => setname(e.target.value)}
+          required
+          InputProps={{
+            startAdornment: (
+              <InputAdornment position="start">
+                <SearchIcon />
+              </InputAdornment>
+            ),
+            style: { height: '40px' }  // Cố định chiều cao của TextField để đồng nhất với nút
+          }}
+          style={{ 
+            width: '500px',
+            background: "#FFFFFF", 
+            height: '40px', 
+            marginRight: '10px'
+          }} 
+        />
+        <Button
+          type="submit"
+          variant="outlined" 
+          color="primary"
+          style={{ 
+            padding: "8px 16px", 
+            background: "#d11111", 
+            color: "#FFFFFF", 
+            height: '40px',  // Đảm bảo nút có cùng chiều cao với TextField
+            borderColor: "#FFFFFF",
+            display: 'flex',
+            alignItems: 'center'
+          }}
+        >
+          Search
+        </Button>
+      </form>
+
           <Grid item style={{display: "flex", alignItems:"center", justifyContent:"center"}}>
             <Typography variant="h6" color="inherit">
               {props.loginUser.first_name}
