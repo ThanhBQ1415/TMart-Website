@@ -111,7 +111,7 @@ function TopBar(props) {
     </Grid>
   </Grid>
 </form>
-          <Grid item style={{display: "flex", alignContent:"center", justifyContent:"center"}}>
+          <Grid item style={{display: "flex", alignItems:"center", justifyContent:"center"}}>
             <Typography variant="h6" color="inherit">
               {props.loginUser.first_name}
             </Typography>
@@ -132,6 +132,7 @@ function TopBar(props) {
 <AppBar position="static">
   <Toolbar className="topbar-appBar" style={{ padding: "0px 80px" }}>
     <Grid container alignItems="center" justifyContent="space-between">
+      
       {/* TMART Button */}
       <Button
         type="submit"
@@ -144,7 +145,7 @@ function TopBar(props) {
       </Button>
       
       {/* Search Form */}
-      <form onSubmit={handleSearchSubmit} style={{ display: 'flex', alignItems: 'center',justifyContent:'space-between'}}>
+      <form onSubmit={handleSearchSubmit} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
         <TextField
           variant="outlined"
           placeholder="Search..."
@@ -158,11 +159,10 @@ function TopBar(props) {
                 <SearchIcon />
               </InputAdornment>
             ),
-            style: { height: '40px' } 
+            style: { height: '40px' }  // Cố định chiều cao của TextField để đồng nhất với nút
           }}
           style={{ 
-            width: '500px',   // Điều chỉnh độ dài theo ý muốn
-            maxWidth: '1000px', // Đặt maxWidth để giới hạn chiều rộng tối đa
+            width: '500px',
             background: "#FFFFFF", 
             height: '40px', 
             marginRight: '10px'
@@ -176,9 +176,9 @@ function TopBar(props) {
             padding: "8px 16px", 
             background: "#d11111", 
             color: "#FFFFFF", 
-            height: '40px',
+            height: '40px',  // Đảm bảo nút có cùng chiều cao với TextField
             borderColor: "#FFFFFF",
-            display: 'flex', // Đảm bảo Button sử dụng Flexbox để căn chỉnh nội dung
+            display: 'flex',
             alignItems: 'center'
           }}
         >
@@ -216,6 +216,7 @@ function TopBar(props) {
     </Grid>
   </Toolbar>
 </AppBar>
+
 
 
     

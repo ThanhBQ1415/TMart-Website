@@ -7,7 +7,6 @@ import {BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import TopBar from "./components/TopBar";
 import UserDetail from "./components/UserDetail";
 import UserList from "./components/UserList";
-import UserPhotos from "./components/UserPhotos";
 import Register from "./components/Register";
 import apiUrl from "../systemVariable";
 import Login from "./components/Login";
@@ -62,7 +61,7 @@ const App = (props) => {
               />
             </Grid>
            
-            <Grid item sm={!!loginUser ? 10 : 12} >
+            <Grid item sm={12} >
               <div className="main-grid-item ">
                   <Routes>
                     <Route
@@ -85,12 +84,7 @@ const App = (props) => {
                           loginUser={loginUser} 
                         />}
                     />
-                    <Route
-                        path="/photos/:userId"
-                        element = {<UserPhotos 
-                          loginUser={loginUser}
-                          photoIsUploaded={uploadedPhoto}/>}
-                    />
+                   
                     <Route path="/product" element={<UserList loginUser={loginUser}  searchname={searchname}
                 onSearchname={handleSearchname}  />} />
                     <Route path="/*" element = {<UserList onLoginUserChange={handleLoginUserChange} loginUser={loginUser} searchname={searchname}

@@ -67,7 +67,6 @@ router.post(
 // [post] /api/user/logout 
 router.post(
   "/logout", 
-  (req, res, next) => auth.hasSessionRecord(req,res,next),
   async (request, response)=>{
     response.clearCookie('user_id');
     request.session.destroy(err => {
@@ -84,7 +83,6 @@ router.post(
 // [get] /api/user/list
 router.get(
   "/list", 
-  (req, res, next) => auth.hasSessionRecord(req,res,next),
   async (request, response) => {
     try {
       const users = await User.find().select("_id last_name first_name");
@@ -97,7 +95,6 @@ router.get(
 // [get] /api/user/:id 
 router.get(
   "/:id", 
-  (req, res, next) => auth.hasSessionRecord(req,res,next),
   async (request, response) => {
     try {
       const id = request.params.id;

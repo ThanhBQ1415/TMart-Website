@@ -11,7 +11,6 @@ const auth = require("../middleware/auth.middleware")
 // [post] /api/photo/new
 router.post(
   "/new", 
-  (req, res, next) => auth.hasSessionRecord(req,res,next),
   upload.single('photo'),
   (req, res, next) => uploadCloud.upload(req, res, next),
   async (request, response) => {
@@ -62,7 +61,6 @@ router.post(
 // [get] /api/photo/photosOfUser/:id 
 router.get(
   "/photosOfUser/:id", 
-  (req, res, next) => auth.hasSessionRecord(req,res,next),
   async (request, response) => {
     try {
       const id = request.params.id;
