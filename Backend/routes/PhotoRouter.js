@@ -8,27 +8,8 @@ const upload = multer({ storage: storage });
 const uploadCloud = require("../middleware/ulpoadCloud.middleware")
 const auth = require("../middleware/auth.middleware")
 
-// [post] /api/photo/new
-router.post(
-  "/new", 
-  upload.single('photo'),
-  (req, res, next) => uploadCloud.upload(req, res, next),
-  async (request, response) => {
-    try{
-      console.log(request.body);
-      const newPhoto = new Photo({
-        file_name : request.body.photo,
-        user_id : request.body.user_id,
-        post_content : request.body.postContent
-      })
-      newPhoto.save();
-      response.sendStatus(200);
-    }
-    catch(e){
-      response.status(500).send({ e });
-    }
-  }
-);
+
+
 
 // [post] /api/photo/commentsOfPhoto/:photo_id
 router.post(
