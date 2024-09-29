@@ -15,9 +15,7 @@ function LoginAndRegister(props) {
   const [registerUsername, setRegisterUsername] = useState('');
   const [registerPassword, setRegisterPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
-  const [location, setLocation] = useState('');
-  const [occupation, setOccupation] = useState('');
-  const [description, setDescription] = useState('');
+  
 
   const [Register, setRegister] = useState(false);
 
