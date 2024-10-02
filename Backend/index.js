@@ -31,10 +31,9 @@ app.use(cors({
 app.use(bodyParser.json());  
 
 const UserRouter = require("./routes/UserRouter");
-const PhotoRouter = require("./routes/PhotoRouter");
+
 const ProductRouter =require("./routes/ProductRouter")
 app.use("/api/user", UserRouter);
-app.use("/api/photo", PhotoRouter);
 app.use("/api/product", ProductRouter);
 app.get("/", (request, response) => {
   response.send({ message: "Hello from photo-sharing app API!" });
